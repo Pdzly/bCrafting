@@ -18,7 +18,7 @@ BCRAFTING.CONFIG.General.Items[1] = {
     Model = "models/healthvial.mdl",
     Resource = { ["Plastic"] = 2, ["Metal"] = 5 },
     onCraft = function( ply )
-        ply:SetHealth( math.Clamp( ply:Health()+50, 0, 100 ) )
+        ply:SetHealth( math.Clamp( ply:Health()+50, 0, ply:GetMaxHealth() ) )
     end
 }
 BCRAFTING.CONFIG.General.Items[2] = {
@@ -27,7 +27,7 @@ BCRAFTING.CONFIG.General.Items[2] = {
     Model = "models/items/healthkit.mdl",
     Resource = { ["Plastic"] = 2, ["Metal"] = 7 },
     onCraft = function( ply )
-        ply:SetHealth( math.Clamp( ply:Health()+75, 0, 100 ) )
+        ply:SetHealth( math.Clamp( ply:Health()+75, 0, ply:GetMaxHealth() ) )
     end
 }
 BCRAFTING.CONFIG.General.Items[3] = {
@@ -36,7 +36,7 @@ BCRAFTING.CONFIG.General.Items[3] = {
     Model = "models/items/healthkit.mdl",
     Resource = { ["Plastic"] = 4, ["Metal"] = 8 },
     onCraft = function( ply )
-        ply:SetHealth( math.Clamp( ply:Health()+100, 0, 100 ) )
+        ply:SetHealth( math.Clamp( ply:Health()+100, 0, ply:GetMaxHealth() ) )
     end
 }
 BCRAFTING.CONFIG.General.Items[4] = {
@@ -45,7 +45,7 @@ BCRAFTING.CONFIG.General.Items[4] = {
     Model = "models/items/battery.mdl",
     Resource = { ["Plastic"] = 2, ["Metal"] = 10 },
     onCraft = function( ply )
-        ply:SetArmor( math.Clamp( ply:Armor()+50, 0, 100 ) )
+        ply:SetArmor( math.Clamp( ply:Armor()+50, 0, ply::GetMaxArmor() ) )
     end
 }
 BCRAFTING.CONFIG.General.Items[5] = {
@@ -54,7 +54,7 @@ BCRAFTING.CONFIG.General.Items[5] = {
     Model = "models/items/battery.mdl",
     Resource = { ["Plastic"] = 4, ["Metal"] = 10 },
     onCraft = function( ply )
-        ply:SetArmor( math.Clamp( ply:Armor()+75, 0, 100 ) )
+        ply:SetArmor( math.Clamp( ply:Armor()+75, 0, ply::GetMaxArmor() ) )
     end
 }
 BCRAFTING.CONFIG.General.Items[6] = {
@@ -63,7 +63,7 @@ BCRAFTING.CONFIG.General.Items[6] = {
     Model = "models/items/battery.mdl",
     Resource = { ["Plastic"] = 10, ["Metal"] = 10 },
     onCraft = function( ply )
-        ply:SetArmor( math.Clamp( ply:Armor()+100, 0, 100 ) )
+        ply:SetArmor( math.Clamp( ply:Armor()+100, 0, ply::GetMaxArmor() ) )
     end
 }
 
